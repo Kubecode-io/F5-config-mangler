@@ -1,0 +1,6 @@
+**venv/
+configs/*.txt
+configs/*.cfg
+output/*.txt
+output/*.cfg
+partition_map/*.yml
