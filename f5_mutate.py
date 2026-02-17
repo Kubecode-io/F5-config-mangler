@@ -144,9 +144,11 @@ for i,line in enumerate(lines):
                 target_partition = ''
                 partition = ''
         elif 'destination' in line:
-            line = line.replace(partition, target_partition)
+            if target_partition:
+                line = line.replace(partition, target_partition)
         elif 'pool' in line and bracket == 1:
-            line = line.replace(partition, target_partition)
+            if target_partition:
+                line = line.replace(partition, target_partition)
     fo.write(line)
 fh.close()
 fo.close()
