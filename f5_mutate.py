@@ -149,7 +149,7 @@ print(f"{len(vs_address_dict)} vs addresses found.")
 # Reset pointer to start of input file
 fh.seek(0)
 lines = fh.readlines()
-fo = open('output/config.cfg', 'w')
+fo = open(f'output/{args.output}', 'w')
 bracket = 0
 object_header = ""
 target_partition = ''
